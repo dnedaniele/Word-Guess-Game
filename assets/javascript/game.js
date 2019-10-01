@@ -19,7 +19,8 @@ document.onkeyup = function () {
         pickSong[i] = "_";
     }
     showProgress = pickSong.join(" ");
-    document.getElementById("answer").innerHTML = showProgress
+    console.log = showProgress
+   // document.getElementById("answer").innerHTML = showProgress
 }
 
 // the player guesses a letter
@@ -53,4 +54,4 @@ var html = '<h3>Press any key to start the game ;)</h3>' + '<p >Wins: ' + wins +
     '<p>Number of Guesses Remaining: ' + guessesLeft + '</p>'
 
 document.querySelector('#game').innerHTML = html;
-} 
+

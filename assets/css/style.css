@@ -1,12 +1,21 @@
-article {
+
+
+  body {
+      margin: auto;
+      text-align: center;
+      width: 70%;
+  }
+
+  article .row {
     display: flex;
+    
   }
   
- p #youGuessedsoFar {
+ p #youGuessedsoFar #answer .column {
     flex: 50%;
    
   }
-  #youGuessedsoFar {
+  #youGuessedsoFar #answer {
       margin-left: 3px;
       
   }
