@@ -6,6 +6,7 @@ var wins = 0;
 var loss = 0;
 var guessesLeft = 15;
 var letterGuessed = [];
+var userguess;
 
 // Functions
 
@@ -18,13 +19,17 @@ document.onkeyup = function () {
     for (var i = 0; i < pickSong.length; i++) {
         pickSong[i] = "_";
     }
+
+    var showProgress = pickSong.length;
+
     showProgress = pickSong.join(" ");
     console.log = showProgress
    // document.getElementById("answer").innerHTML = showProgress
 }
 
 // the player guesses a letter
-
+ 
+// prompt () {}
 // document.onkeyup = function () {
 //     var userguess = String.fromCharCode(event.keyCode).toLocaleLowerCase();
 //     console.log(userguess); }
@@ -44,7 +49,7 @@ else {
     alert('you loose: ' + loss);
     //    3. add letterGuessed = [] CAPITAL
     letterGuessed.push(userguess);
-    document.getElementById("youGuessedsoFar").innerHTML.toLocaleUpperCase = letterGuessed.join(" ");
+    document.getElementById("youGuessedsoFar").innerHTML = letterGuessed.join(" ").toUpperCase();
 }
 
 
