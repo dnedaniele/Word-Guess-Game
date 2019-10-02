@@ -22,6 +22,10 @@ document.onkeyup = function (event) {
 
         var numbLettToGuess = pickSong.length;
         console.log(numbLettToGuess);
+
+        document.getElementById("answer").innerHTML = pickSong[numbLettToGuess];
+// reproduce the spaces
+        ShowProgress = // number of spaces _ _ _ = pickSong(numbLettToGuess)
         document.getElementById
 
         // empty = numbLettToGuess.split("").join(" ");
