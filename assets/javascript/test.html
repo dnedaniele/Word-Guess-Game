@@ -9,32 +9,34 @@
 </head>
 
 <body>
+<script>
+var body = document.body;    
+var h1 = document.createElement("h1");  
+var p = document.createElement("p");
+var div = document.createElement("div")
+var img = document.createElement("img")
+var h2 = document.createElement("h2")
+ 
+h1.textContent = "First Crazy h1";
+p.textContent = "first paragraph";
+img.src = "http://www.littlerivermarine.com/img/tropical-background-2copy-h12.jpg";
+
+h1.setAttribute("style","text-align: center");
+p.setAttribute("style", "color", "red");
+div.setAttribute("style", "display: flex; justify-content: center");
+img.setAttribute("style", "width: 300px");
+
+
+body.appendChild(h1);
+body.appendChild(p);
+body.appendChild(img);
+body.appendChild(div);
+div.appendChild(img);
+div.appendChild(h2)
 
 
 
-    <p id = "answer"></p>
-
-    <script>
-        var songsOptions = ["YellowSubmarine", "EleanorRugby", "AllYouNeedIsLove", "StrawberryFieldsForever"];
-        
-// pick a random song
-        pickSong = songsOptions[Math.floor(Math.random()*songsOptions.length)];
-
-        var showProgress = []; // to store the guesses
-
-        document.onkeyup = function startUp() {
-            for (var i = 0; i < songsOptions.length; i++) {
-                showProgress[i] = "_";
-            }
-            //put them in a string
-            var s = showProgress.join(" ");
-            document.getElementById("answer").innerHTML = s;
-        }
-
-        
-
-
-    </script>
+</script>
 
 </body>
 
