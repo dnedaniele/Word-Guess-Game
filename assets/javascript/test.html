@@ -9,34 +9,51 @@
 </head>
 
 <body>
+
+        <header>
+                <h1>Guess the Beatles's Songs</h1>
+                <img alt="group picture" src="https://identity-mag.com/wp-content/uploads/2016/05/bands_the_beatles.jpg"
+                    height="200px" weight="400px">
+            </header>
+        
+            <div id="game">
+                <p>Press any key to get started!</p>
+                <br>
+                <p>Wins:</p>
+                <p>Losses: </p>
+                <p>Number of Guesses Remaining:</p>
+            </div>
+        
+            <div class="row">
+                <p class="column">Current Song to Guess:</p>
+                <div id="answer"></div>
+            </div>
+        
+            <article>
+                <p>Your guesses so far: </p>
+                <p id="youGuessedsoFar"></p>
+            </article>
+        
 <script>
-var body = document.body;    
-var h1 = document.createElement("h1");  
-var p = document.createElement("p");
-var div = document.createElement("div")
-var img = document.createElement("img")
-var h2 = document.createElement("h2")
- 
-h1.textContent = "First Crazy h1";
-p.textContent = "first paragraph";
-img.src = "http://www.littlerivermarine.com/img/tropical-background-2copy-h12.jpg";
+    var songsOptions = ["YellowSubmarine", "EleanorRugby", "AllYouNeedIsLove", "StrawberryFieldsForever"];
+    var pickSong = [];
 
-h1.setAttribute("style","text-align: center");
-p.setAttribute("style", "color", "red");
-div.setAttribute("style", "display: flex; justify-content: center");
-img.setAttribute("style", "width: 300px");
+document.onkeyup = function (event) {
+    pickSong = songsOptions[Math.floor(Math.random() * songsOptions.length)];
+    console.log(pickSong);
 
+    var showProgress =[];
+    for (var i = 0; i < pickSong.length; i++) {
+        pickSong[i] = "_";
 
-body.appendChild(h1);
-body.appendChild(p);
-body.appendChild(img);
-body.appendChild(div);
-div.appendChild(img);
-div.appendChild(h2)
+        var showProgress =[];
 
+        empty = showProgress.split("").join(" ");
+        console.log(showProgress);
+        
+    }
 
-
-</script>
+<script>
 
 </body>
 

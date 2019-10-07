@@ -8,6 +8,7 @@ var loss = 0;
 var guessesLeft = 15;
 var letterGuessed = [];
 var userguess;
+var n = "_"
 
 // Functions
 
@@ -18,20 +19,38 @@ document.onkeyup = function (event) {
     console.log(pickSong);
     // Write on HTML "current song to be guessed:" "_ _ _ _ _ "  - pick number of letters from pickSong and reproduce the spaces
     for (var i = 0; i < pickSong.length; i++) {
-        pickSong[i] = "_";
+        ShowProgress[i] = "_";
+    }
 
         var numbLettToGuess = pickSong.length;
         console.log(numbLettToGuess);
+ ////**************************************************8
 
-        document.getElementById("answer").innerHTML = pickSong[numbLettToGuess];
-// reproduce the spaces
-        ShowProgress = // number of spaces _ _ _ = pickSong(numbLettToGuess)
-        document.getElementById
+ while (numbLettToGuess > 0) {
+    document.getElementById("answer").innerHTML = ShowProgress.join(" ");
+
+    var userguess = String.fromCharCode(event.keyCode).toLocaleLowerCase();
+    console.log(userguess);
+
+
+ }
+        
+
+
+//         function CountSpaces (event, ShowProgress) {
+//         var ShowProgress = numbLettToGuess.split(",");
+//         };
+        
+//         document.getElementById("answer").innerHTML = pickSong[numbLettToGuess];
+// // reproduce the spaces
+//         ShowProgress = // number of spaces _ _ _ = pickSong(numbLettToGuess)
+//         document.getElementById
 
         // empty = numbLettToGuess.split("").join(" ");
     
         
-    }
+    } 
+} 
 
 
 
@@ -67,7 +86,7 @@ document.querySelector('#game').innerHTML = html;
 
     
    // document.getElementById("answer").innerHTML = numbLettToGuess
-}
+
 
 // the player guesses a letter
  
